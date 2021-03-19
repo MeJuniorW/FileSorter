@@ -43,7 +43,7 @@ namespace FileSorter
                     if (type.Value.Contains(sourceFile.Extension))
                     {
                         string destinationOfFile = destinationPath + @"\"+  type.Key + @"\" + sourceFile.Name;
-                        Console.WriteLine($"File : {sourceFile.FullName}");
+                        Console.WriteLine($"File : {sourceFile.Name}");
                         Console.WriteLine($"Will be moved to : {destinationOfFile}");
                         new FileInfo(destinationOfFile).Directory.Create();
                         File.Move(sourceFile.FullName, destinationOfFile);
