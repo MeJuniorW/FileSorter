@@ -29,8 +29,10 @@ namespace FileSorter
             fileTypes.Add("Text", textExtensions);
 
             // Loading the Files
-            var pathToSort = @"C:\Users\user\Downloads\";
-            var destinationPath = @"C:\Users\user\Downloads\SortedFiles";
+            Console.WriteLine("Enter Directory to sort: ");
+            string pathToSort = @Console.ReadLine();
+            Console.WriteLine("Enter Destination Directory: ");
+            string destinationPath = @Console.ReadLine();
             string[] filesToSort = Directory.GetFiles(pathToSort, "*", SearchOption.TopDirectoryOnly);
 
             
@@ -50,6 +52,7 @@ namespace FileSorter
                     }
                 }
             }
+            Console.ReadKey();
         }
     }
 }
